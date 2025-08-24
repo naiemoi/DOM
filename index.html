@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tour of DOM</title>
+    <style>
+        h1{
+            color: red;
+        }
+        #food-title{
+            color: green;
+        }
+        .foods .eat{
+            font-weight: 700;
+            color: blue;
+        }
+        .big{
+           font-size: large;
+           font-weight: 100;
+        }
+    </style>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+       <h1>this is my header no banner</h1>
+    </header>
+    <main id="main-container">
+        <section id="old-dhaka" class="songs">
+        <h1>welcome to my dom</h1>
+        <p>Lorem ipsum dolor sit amet consectetur <span>oli-goli</span> adipisicing elit. <span>ekoasl;;lsal;</span>Ab, fugit!</p>
+        <h1>hello man <span>some text</span> </h1>
+        <ul>
+            <li class="eat">naiem</li>
+            <li id="jk">jakaria</li>
+            <li>kabir</li>
+        </ul>
+        </section>
+        <section class="foods">
+            <h1 id="food-title">foods i love</h1>
+            <ul>
+                <li>rice</li>
+                <li class="eat">fish</li>
+                <li class="eat">fruits</li>
+                <li class="eat">flower</li>
+            </ul>
+        </section>
+        <section id="players-containers">
+            <h1>players</h1>
+            <ul id="player-list">
+                <li>messi</li>
+                <li>neymar</li>
+                <li>kauwa</li>
+                <li>jije</li>
+            </ul>
+        </section>
+    </main>
+    <script>
+           // console.log('hello how are you?')
+        // console.log('what to you do')
+        // const student = {
+        //     name: 'naiem',
+        //     id: 123,
+        //     study: function (subect){
+        //         console.log('studying subject: ', subect);
+        //     }
+        // }
+        // document.getElementsByTagName
+        // const licolledtion=document.getElementsByTagName('li');
+        // console.log(licolledtion);
+        // for(const li of licolledtion){
+        //     console.log(li.innerText);
+        // }
+
+        // get by id
+        const foodlist=document.getElementById('food-title');
+        //console.log(foodlist.innerText);
+        foodlist.innerText = 'food i love to eat';
+        const jak=document.getElementById('jk');
+        jak.innerText='Rahim';
+
+        // get elemebt by classname
+        const cls=document.getElementsByClassName('eat');
+        //console.log(cls);
+        for(const item of cls){
+            //console.log(item.innerText);
+        }
+
+        // query selector all
+        const spanElement=document.querySelectorAll('#old-dhaka p span');
+        for(const span of spanElement){
+            //console.log(span.innerText);
+        }
+    </script>
+    <script src="js/hello.js"></script>
+    <script src="js/cssinjs.js"></script>
+    <script src="js/child.js"></script>
+    <script src="js/append.js"></script>
+</body>
+</html>
